@@ -1,15 +1,27 @@
 import { Component, Input } from '@angular/core';
-import { Anime } from '../../../core/models/anime.model';
-import { MatCardModule } from '@angular/material/card';
 import { RouterLink } from '@angular/router';
 
+import { Anime } from '../../../core/models/anime.model';
+
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
+
 @Component({
-  imports: [MatCardModule, RouterLink],
   selector: 'app-anime-card',
+
+  standalone: true,
+
+  imports: [
+    RouterLink,
+    MatCardModule,
+    MatButtonModule
+  ],
+
   templateUrl: './anime-card.html',
+
   styleUrl: './anime-card.scss'
 })
-export class AnimeCardComponent {
+export class AnimeCard {
 
   @Input() anime!: Anime;
 

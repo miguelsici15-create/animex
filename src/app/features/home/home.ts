@@ -14,7 +14,6 @@ import { MatIconModule } from '@angular/material/icon';
     MatIconModule,
     MatButtonModule,
     MatCardModule
-   
   ],
   selector: 'app-home',
   templateUrl: './home.html',
