@@ -1,0 +1,83 @@
+.hero {
+  min-height: 650px;
+
+  margin-top: 64px;
+
+  background-size: cover;
+  background-position: center;
+
+  position: relative;
+}
+
+.overlay {
+  min-height: 650px;
+
+  display: flex;
+  align-items: center;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0,0,0,0.95),
+      rgba(0,0,0,0.5),
+      rgba(0,0,0,0.1)
+    );
+}
+
+.hero-content {
+  max-width: 600px;
+
+  padding: 50px;
+  color: white;
+}
+
+.tag {
+  color: #ff4081;
+  font-weight: bold;
+}
+
+.hero h1 {
+  font-size: 64px;
+  margin: 15px 0;
+}
+
+.info {
+  display: flex;
+  gap: 10px;
+
+  margin-bottom: 20px;
+
+  color: #ddd;
+}
+
+.hero p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.buttons {
+  display: flex;
+  gap: 15px;
+
+  margin-top: 30px;
+}
+
+.section {
+  padding: 40px;
+
+  background: #0b0b0b;
+  color: white;
+}
+
+.section h2 {
+  margin-bottom: 25px;
+}
+
+.anime-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fill, minmax(220px, 1fr));
+
+  gap: 25px;
+}

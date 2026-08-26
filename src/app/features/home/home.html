@@ -1,0 +1,75 @@
+<section
+  class="hero"
+  [style.backgroundImage]="'url(' + destaque.banner + ')'"
+>
+
+  <div class="overlay">
+
+    <div class="hero-content">
+
+      <span class="tag">
+        ANIME EM DESTAQUE
+      </span>
+
+      <h1>
+        {{ destaque.titulo }}
+      </h1>
+
+      <div class="info">
+
+        ⭐ {{ destaque.nota }}
+
+        <span>•</span>
+
+        {{ destaque.ano }}
+
+        <span>•</span>
+
+        {{ destaque.status }}
+
+      </div>
+
+      <p>
+        {{ destaque.descricao }}
+      </p>
+
+      <div class="buttons">
+
+        <button
+          mat-raised-button
+          color="primary"
+          [routerLink]="['/anime', destaque.id]"
+        >
+          <mat-icon>play_arrow</mat-icon>
+          Ver detalhes
+        </button>
+
+        <button mat-stroked-button>
+          <mat-icon>add</mat-icon>
+          Minha lista
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="section">
+
+  <h2>🔥 Mais populares</h2>
+
+  <div class="anime-grid">
+
+    @for (anime of animes; track anime.id) {
+
+      
+
+    }
+
+  </div>
+
+</section>

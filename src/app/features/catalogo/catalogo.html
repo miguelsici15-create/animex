@@ -1,0 +1,38 @@
+<main class="catalogo">
+
+  <h1>Catálogo de Animes</h1>
+
+  <mat-form-field
+    appearance="outline"
+    class="search"
+  >
+
+    <mat-label>
+      Pesquisar anime
+    </mat-label>
+
+    <input
+      matInput
+      [(ngModel)]="busca"
+      (input)="pesquisar()"
+      placeholder="Ex: Naruto"
+    >
+
+    <mat-icon matSuffix>
+      search
+    </mat-icon>
+
+  </mat-form-field>
+
+
+  <div class="anime-grid">
+
+    @for (anime of animes; track anime.id) {
+
+      <app-anime-card [anime]="anime"></app-anime-card>
+
+    }
+
+  </div>
+
+</main>

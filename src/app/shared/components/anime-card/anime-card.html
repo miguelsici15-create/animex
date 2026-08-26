@@ -1,0 +1,43 @@
+<mat-card class="anime-card">
+
+  <img
+    mat-card-image
+    [src]="anime.imagem"
+    [alt]="anime.titulo"
+  >
+
+  <mat-card-content>
+
+    <h2>{{ anime.titulo }}</h2>
+
+    <div class="rating">
+      ⭐ {{ anime.nota }}
+    </div>
+
+    <p>
+      {{ anime.ano }} • {{ anime.episodios }} episódios
+    </p>
+
+    <div class="genres">
+
+      @for (genero of anime.genero; track genero) {
+        <span>{{ genero }}</span>
+      }
+
+    </div>
+
+  </mat-card-content>
+
+  <mat-card-actions>
+
+    <button
+      mat-raised-button
+      color="primary"
+      [routerLink]="['/detalhes', anime.id]"
+    >
+      Ver detalhes
+    </button>
+
+  </mat-card-actions>
+
+</mat-card>
