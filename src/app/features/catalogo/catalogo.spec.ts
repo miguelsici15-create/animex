@@ -8,7 +8,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { AnimeService } from '../../core/anime.service';
 import { Anime } from '../../core/models/anime.model';
 
-import { AnimeCardComponent } from '../../shared/components/anime-card/anime-card';
+import { AnimeCard } from '../../shared/components/anime-card/anime-card';
 
 
  @Component({
@@ -19,7 +19,7 @@ import { AnimeCardComponent } from '../../shared/components/anime-card/anime-car
     MatFormFieldModule,
     MatInputModule,
     MatIconModule,
-    AnimeCardComponent
+    AnimeCard
   ],
   templateUrl: './catalogo.html',
   styleUrl: './catalogo.scss'

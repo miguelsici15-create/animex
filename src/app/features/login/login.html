@@ -1,0 +1,85 @@
+<main class="login-page">
+
+  <section class="login-card">
+
+    <div class="logo">
+      <mat-icon>play_circle</mat-icon>
+      <span>Animex</span>
+    </div>
+
+    <h1>Entrar</h1>
+
+    <p class="subtitulo">
+      Entre na sua conta para continuar assistindo seus animes.
+    </p>
+
+    <form (ngSubmit)="entrar()">
+
+      <mat-form-field appearance="outline">
+
+        <mat-label>E-mail</mat-label>
+
+        <input
+          matInput
+          type="email"
+          name="email"
+          [(ngModel)]="email"
+          required
+        >
+
+        <mat-icon matPrefix>email</mat-icon>
+
+      </mat-form-field>
+
+
+      <mat-form-field appearance="outline">
+
+        <mat-label>Senha</mat-label>
+
+        <input
+          matInput
+          type="password"
+          name="senha"
+          [(ngModel)]="senha"
+          required
+        >
+
+        <mat-icon matPrefix>lock</mat-icon>
+
+      </mat-form-field>
+
+
+      @if (mensagem) {
+
+        <p class="erro">
+          {{ mensagem }}
+        </p>
+
+      }
+
+
+      <button
+        mat-raised-button
+        color="primary"
+        type="submit"
+        class="botao"
+      >
+        Entrar
+      </button>
+
+    </form>
+
+
+    <p class="cadastro">
+
+      Ainda não possui uma conta?
+
+      <a routerLink="/cadastro">
+        Criar conta
+      </a>
+
+    </p>
+
+  </section>
+
+</main>

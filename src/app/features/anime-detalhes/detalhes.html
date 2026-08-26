@@ -1,0 +1,88 @@
+@if (anime) {
+
+  <main class="detalhes">
+
+    <section
+      class="banner"
+      [style.background-image]="'url(' + anime.banner + ')'"
+    >
+
+      <div class="banner-overlay">
+
+        <div class="informacoes">
+
+          <img
+            [src]="anime.imagem"
+            [alt]="anime.titulo"
+          >
+
+          <div>
+
+            <h1>{{ anime.titulo }}</h1>
+
+            <div class="nota">
+              ⭐ {{ anime.nota }}
+            </div>
+
+            <p>
+              {{ anime.descricao }}
+            </p>
+
+            <p>
+              <strong>Ano:</strong>
+              {{ anime.ano }}
+            </p>
+
+            <p>
+              <strong>Episódios:</strong>
+              {{ anime.episodios }}
+            </p>
+
+            <p>
+              <strong>Status:</strong>
+              {{ anime.status }}
+            </p>
+
+            <div class="generos">
+
+              @for (genero of anime.genero; track genero) {
+                <span>{{ genero }}</span>
+              }
+
+            </div>
+
+            <button
+              mat-raised-button
+              color="primary"
+              (click)="voltar()"
+            >
+              <mat-icon>arrow_back</mat-icon>
+              Voltar
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+} @else {
+
+  <main class="erro">
+
+    <h1>Anime não encontrado</h1>
+
+    <button
+      mat-raised-button
+      routerLink="/catalogo"
+    >
+      Voltar ao catálogo
+    </button>
+
+  </main>
+
+}

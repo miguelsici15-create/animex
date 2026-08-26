@@ -1,0 +1,129 @@
+.cadastro-page {
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 30px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #971e1e,
+      #f0eded,
+      #270606
+    );
+}
+
+.cadastro-card {
+  width: 100%;
+  max-width: 450px;
+
+  padding: 45px;
+
+  background: #fffdfd;
+
+  border-radius: 16px;
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.6);
+
+  color: rgb(0, 0, 0);
+}
+
+.logo {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  margin-bottom: 25px;
+
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.logo mat-icon {
+  font-size: 32px;
+
+  width: 32px;
+  height: 32px;
+}
+
+h1 {
+  text-align: center;
+
+  font-size: 32px;
+
+  margin-bottom: 10px;
+}
+
+.subtitulo {
+  text-align: center;
+
+  color: #aaa;
+
+  margin-bottom: 25px;
+
+  line-height: 1.5;
+}
+
+mat-form-field {
+  width: 100%;
+
+  margin-bottom: 10px;
+}
+
+.botao {
+  width: 100%;
+  height: 52px;
+
+  margin-top: 15px;
+
+  background-color: #fd0505 !important;
+  color: #ffffff !important;
+
+  font-size: 17px;
+  font-weight: 600;
+
+  border-radius: 8px;
+
+  transition: 0.2s ease;
+}
+
+.botao:hover {
+  background-color: #070707 !important;
+
+  transform: translateY(-2px);
+}
+
+.erro {
+  color: #ff6b6b;
+
+  text-align: center;
+
+  margin: 10px 0;
+}
+
+.login {
+  text-align: center;
+
+  margin-top: 25px;
+
+  color: #86849473;
+}
+
+.login a {
+  color: #ff0000;
+
+  font-weight: bold;
+
+  text-decoration: none;
+}
+
+.login a:hover {
+  text-decoration: underline;
+}
